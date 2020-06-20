@@ -1,0 +1,22 @@
+Using Machine Learning to find temperature of phase transition in XY Model.
+
+This project has been created during First Steps in Science programme at Silesian University in 2019.
+
+In order to run all the files properly make sure that you have the following packages:
+
+-numpy
+-pandas
+-matplotlib
+-keras
+-scikitlearn.
+
+1. monte_carlo_XY.py - this file creates a model of given shape and calculates the interesting physical properties. You can change the size of your model, the range of temperatures, the number of configs in given temperature and the path of created files
+2. angle_shift.py - this file changes the whole configuration by random constant value. It provides diversity and allows your neural network to learn properly.
+3. cos_sin.py - without this factorisation a neural network was unable to learn
+4. NN_512.py - training on created data
+5. Predicting_NN_512.py - using a trained model to predict whether a system is in 'high' or 'low' temperature. If a result is lower than 0.5 than system is in low temperature and when probablity is higher than 0.5 than system is in high temperature. You can test a prediction on two given files and already trained model.
+6. Visualisation.py - draws a graph of probability -p in function of temperature and 1-p. The point of intersection is the point of phase transition. In file example_prob.txt there are already calculated probability for 16x16 system.
+
+
+
+
